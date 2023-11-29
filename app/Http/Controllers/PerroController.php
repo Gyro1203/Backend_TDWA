@@ -12,6 +12,8 @@ class PerroController extends Controller
      */
     public function index()
     {
+        $perros = Perro::all();
+        return view('perros.index', compact('perros'));
         // pagina de inicio
     }
 
@@ -20,6 +22,8 @@ class PerroController extends Controller
      */
     public function create()
     {
+        $perro = new Perro();
+        return view('perros.create', compact('perro'));
         // formulario para crear un nuevo perro
     }
 

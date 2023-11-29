@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('perro', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('url_imagen');
-            $table->string('descripcion'); 
+            $table->string('url_imagen')->nullable();
+            $table->string('descripcion')->nullable();
             $table->timestamps();
         });
     }

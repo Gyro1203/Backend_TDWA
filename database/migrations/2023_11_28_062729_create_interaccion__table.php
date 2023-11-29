@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_perro_interesado')->constrained('perro');
             $table->foreignId('id_perro_candidato')->constrained('perro');
-            $table->string(['R', 'A']);
+            $table->integer('rechazado')->default(0);
+            $table->integer('aprobado')->default(0);
             $table->timestamps();
         });
     }
